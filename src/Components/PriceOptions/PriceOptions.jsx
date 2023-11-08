@@ -1,3 +1,4 @@
+import PriceOption from "../PriceOption/PriceOption";
 
 
 
@@ -54,8 +55,16 @@ const PriceOptions = () => {
     
       
     return (
-        <div>
-            
+        <div className="">
+            <h2 className="text-4xl font-extrabold  " >
+                Best Prices in Town :
+              <div className=" grid grid-cols-3 gap-4 text-center ">
+              {
+                    PriceOptions.map((options) => <PriceOption  key={options.id} options={options} ></PriceOption>)
+                }
+              </div>
+
+            </h2>
         </div>
     );
 };
